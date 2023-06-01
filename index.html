@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cocan</title>
+
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+
+    <script src="./src/neucard.js" defer></script>
+    <script src="./src/text.js" defer></script>
+    <script src="./src/impacttracer.js" defer></script>
+    <script src="./src/scroller.js" defer></script>
+<body>
+    <div class="overlay">
+        <div class="msgcontainer"></div>
+        <div class="pastillerow">
+            <div class="pastille cap"></div>
+            <div class="pastille can"></div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card neucard">
+            <h1>Consumérisme</h1>
+            <p>
+                Le consumérisme est un mode de vie concentré sur la consommation qui se caractérise par une propension à acheter systématiquement de nouveaux produits et la recherche du plaisir et du confort dans la possession matérielle. Elle est surtout surprésente dans notre société occidentale capitaliste.
+            </p>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" id="capinfo">
+            <h2>Cap</h2>
+            <h3>Le Capitaliste</h3>
+            <p>
+                Du point de vue des capitalistes moyens, le consumerisme est considéré comme un moteur essentiel de l'économie. Ils soutiennent que la consommation accrue stimule la croissance économique, favorise l'innovation et crée des opportunités d'emploi. Selon eux, le désir d'acheter de nouveaux produits incite les entreprises à investir dans la recherche et le développement, ce qui conduit à l'amélioration constante des produits et à l'émergence de nouvelles technologies.
+                <br><br>
+                Les capitalistes voient également le consumerisme comme un moyen de réaliser le progrès et d'améliorer la qualité de vie. Ils soulignent que la demande croissante de biens et de services incite les entreprises à proposer des produits plus variés et accessibles à un plus grand nombre de personnes. Cela favorise la démocratisation de certains biens et permet à un plus grand nombre de personnes de bénéficier des avancées technologiques et du confort matériel.
+            </p>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" id="caninfo">
+            <h2>Oyo</h2>
+            <h3>L'envers de la médaille</h3>
+            <p>
+                Cependant, certains critiques soulignent que le consumerisme peut entraîner des conséquences néfastes pour la société et l'environnement. Ils mettent en garde contre la surconsommation, le gaspillage des ressources naturelles et la dégradation de l'environnement. De plus, ils soulignent que le consumerisme peut nourrir une culture de l'endettement excessif et de l'insatisfaction constante, poussant les individus à rechercher le bonheur dans la possession matérielle plutôt que dans des aspects plus profonds de la vie.
+                <br><br>
+                <button onclick="playTextScenario(this)">Faire jouer un scénario</button>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Traceur d'Impacts</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias maxime temporibus qui asperiores nobis.
+                <select id="starts">
+                    <option value="car">Automobile</option>
+                    <option value="can">Boîte de conserve</option>
+                    <option value="uniform">Uniforme d'école</option>
+                </select>
+                <input id="dotrace" type="button" value="Tracer">
+            </p>
+            <br>
+            <div class="tracetree">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+.msgcontainer {
+    height: 100%;
+    overflow: hidden;
+    padding: 0 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    pointer-events: none;
+}
+
+.msgcontainer * {
+    pointer-events: initial;
+    transition: 1s;
+}
+
+.msgcontainer>.row {
+    padding: 0.2em;
+    width: 100%;
+}
+
+
+@keyframes expand {
+    from {
+        max-height:0;
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.msg {
+    display: block;
+    border-radius: 1rem;
+    padding: 0.4em;
+    width: fit-content;
+    max-height: 10in;
+    z-index: 1000;
+    animation: expand 0.6s ease-in-out;
+    transition: max-height 2s ease-out;
+    white-space: pre-line;
+}
+
+
+
+.msg.can {
+    float: right;
+    background-color: skyblue;
+    color: firebrick;
+}
+
+.msg.cap {
+    float: left;
+    background-color: gold;
+    color: green;
+}

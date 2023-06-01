@@ -1,0 +1,12 @@
+:root {
+    --bg: hsl(128, 10%, 24%);
+    --bg-dark: hsl(128, 10%, 12%);
+    --light: rgb(180, 180, 180);
+
+    --light-t: rgba(255, 255, 255, 0.2);
+    --dark-t: rgb(0, 0, 0, 0.1);
+
+    --main: green;
+    --secondary: purple;
+    --emphasis: hsl(128, 80%, 48%);
+}

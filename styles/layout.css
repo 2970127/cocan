@@ -1,0 +1,109 @@
+.card-container {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    overflow: visible;
+    padding: 0rem 2rem
+}
+
+.card {
+    height: 80dvh;
+
+    padding: 5%;
+    border-radius: 1rem;
+
+    background: var(--light-t);
+}
+
+/* tilting cards */
+
+.neucard {
+    position: relative;
+    aspect-ratio: 1/1;
+
+    background: var(--bg-dark);
+
+    transform-style: preserve-3d;
+    transform:
+        perspective(8000px) rotateX(var(--rotX)) rotateY(var(--rotY));
+}
+
+.neucard::before,
+.neucard::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+
+.neucard::before {
+    inset: 0.75rem;
+    background: black;
+
+    transform: translateZ(-49px);
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+.neucard::after {
+    inset: -1rem;
+    background: linear-gradient(45deg, lime, purple);
+    transform: translateZ(-50px);
+}
+
+/* interactive pastille & chat overlay */
+.overlay {
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+
+    pointer-events: none;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.overlay * {
+    pointer-events: initial;
+}
+
+.pastillerow {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-self: flex-end;
+
+    width: 100%;
+
+    padding: 2rem;
+}
+
+.pastille {
+    width: 8rem;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transition: all .2s ease-in-out;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.pastille:hover {
+    transform: scale(1.2);
+}
+
+.pastille.can {
+    background-color: skyblue;
+    background-image: url(../img/can/0.png);
+}
+
+.pastille.cap {
+    background-color: gold;
+    background-image: url(../img/cap/0.png);
+}

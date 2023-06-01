@@ -1,0 +1,33 @@
+@import url(./color.css);
+@import url(./layout.css);
+@import url(./text.css);
+@import url(./tree.css);
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+
+    background: var(--bg);
+    background-image: conic-gradient(from 0deg at 50% 50%,
+            var(--main),
+            var(--secondary),
+            var(--secondary),
+            var(--main));
+    background-blend-mode: multiply;
+
+    color: var(--light);
+
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

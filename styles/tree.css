@@ -1,0 +1,10 @@
+.impactnode {
+    width: fit-content;
+    padding: 0.4rem;
+    margin: 0 0.4rem;
+    background-color: var(--dark-t);
+}
+
+.tracetree {
+    text-align: center;
+}
